@@ -4,6 +4,7 @@ html {
 	text-align: center;
 	font-size: 40px;
 	cursor: default;
+	user-select: none;
 	-webkit-user-select: none;
 	-webkit-tap-highlight-color: transparent;
 }
@@ -14,7 +15,7 @@ div {
 	margin: 0;
 	padding: 0;
 	left: 10%;
-	font-family: 'xinwei';
+	font-family: 'fzhtk';
 }
 
 a {
@@ -93,6 +94,7 @@ input[type="checkbox"] {
 }
 
 #changesite.editing {
+	user-select: text;
 	-webkit-user-select: text;
 	cursor: auto;
 	box-shadow: rgba(0, 0, 0, 0.3) 0 0 0 1px, rgba(0, 133, 255, 0.4) 0 0 0 2px, rgba(0, 133, 255, 1) 0 0 8px;
@@ -139,13 +141,13 @@ input[type="checkbox"] {
 	cursor: pointer;
 }
 
-::-webkit-scrollbar{
-    display: none;
+::-webkit-scrollbar {
+	display: none;
 }
 
 @font-face {
-	font-family: 'xinwei';
-	src: url('xinwei.ttf');
+	font-family: 'fzhtk';
+	src: url('fzhtk.ttf');
 }
 
 #message {

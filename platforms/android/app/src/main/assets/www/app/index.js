@@ -26,7 +26,7 @@
 						localStorage.setItem('noname_inited', result.message);
 						cordova.exec(() => location.reload(), () => location.reload(), 'FinishImport', 'importReceived', []);
 					}
-				}, () => {}, 'FinishImport', 'importReady', []);
+				}, () => { }, 'FinishImport', 'importReady', []);
 			};
 
 			getImportPackage();
@@ -96,7 +96,7 @@
 						// alert('请用其他方式打开zip文件，选择大乱桌斗导入，注: 万能导入无效');
 						checkConnection();
 					});
-			});
+				});
 
 			/** 添加app/index.css的样式 */
 			let link = document.createElement('link');
@@ -223,12 +223,12 @@
 			});
 
 			/** GitHub Proxy更新源 */
-			const site_c = 'https://ghproxy.com/https://raw.githubusercontent.com/libccy/noname/master/';
+			const site_c = 'https://ghproxy.com/https://raw.githubusercontent.com/Show-K/noname/super-smash-tabletop/';
 			/** URC更新源 */
-			const site_urc = 'https://unitedrhythmized.club/libccy/noname/master/';
+			const site_urc = 'https://unitedrhythmized.club/Show-K/noname/super-smash-tabletop/';
 			/** 现在使用的更新源 */
 			let site = site_c;
-			
+
 			/**
 			 * @description 请求指定网址的js文件并执行
 			 * @param { string } url 请求指定网址的js文件
@@ -273,9 +273,9 @@
 
 			/** 点击更新源按钮后根据req的结果更改显示文字 */
 			function checkConnection() {
-				zipDataDiv.innerHTML = `更新源: ${ site == site_c ? 'GitHub Proxy' : 'URC' }(点击此处更换更新源)`;
+				zipDataDiv.innerHTML = `更新源: ${site == site_c ? 'GitHub Proxy' : 'URC'}(点击此处更换更新源)`;
 				// 赋值更换更新源的点击事件
-				zipDataDiv.onclick = function() {
+				zipDataDiv.onclick = function () {
 					if (this.classList.toggle('bluetext')) {
 						site = site_urc;
 						zipDataDiv.innerHTML = `更新源: URC`;
@@ -330,7 +330,7 @@
 					zipDataDiv.remove();
 					help.remove();
 					version.remove();
-					
+
 					const prompt = createElement('div', {
 						innerText: '正在下载游戏文件',
 						parentNode: document.body,
@@ -482,16 +482,16 @@
 					}, null, function () {
 						setTimeout(finish, 500);
 					});
-				}, () => {}, 'noname_source_list');
+				}, () => { }, 'noname_source_list');
 			}
 
 			helpnodetext.innerHTML =
 				`<div>
 					<ol>
 						<li>访问
-						<a href="https://hub.fastgit.org/libccy/noname/archive/refs/heads/master.zip">网址1</a>，
+						<a href="https://hub.fastgit.org/Show-K/noname/archive/refs/heads/super-smash-tabletop.zip">网址1</a>，
 						或者
-						<a href="https://hub.fastgit.xyz/libccy/noname/archive/refs/heads/master.zip">网址2</a>
+						<a href="https://hub.fastgit.xyz/Show-K/noname/archive/refs/heads/super-smash-tabletop.zip">网址2</a>
 						下载zip文件。
 						<li>选择zip文件,然后用其他方式-大乱桌斗导入
 						<li>完成上述步骤后，<a href="javascript:localStorage.setItem(\'noname_inited\',window.tempSetNoname);window.location.reload()">点击此处</a>

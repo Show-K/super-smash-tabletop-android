@@ -484,7 +484,7 @@ document.addEventListener('deviceready', () => {
 		});
 	}.bind(window.noname_shijianInterfaces);
 
-	noname_shijianInterfaces.stop = function () { 
+	noname_shijianInterfaces.stop = function () {
 		this.wsserver.stop((addr, port) => {
 			console.log('Stopped listening on %s:%d', addr, port);
 		});
@@ -497,5 +497,5 @@ document.addEventListener('deviceready', () => {
 
 	if (localStorage.getItem('noname_shijianWebSocketOpen') == 'true') {
 		noname_shijianInterfaces.start(noname_shijianInterfaces.port || 8080);
-	}	
+	}
 }, false);
