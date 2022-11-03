@@ -1,4 +1,4 @@
-package com.noname.shijian;
+package xyz.unitedrhythmizedclub.supersmashtabletop;
 
 public class FileView {
     private final String name;

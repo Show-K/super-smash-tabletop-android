@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.noname.shijian"
+<widget id="xyz.unitedrhythmizedclub.supersmashtabletop"
     version="1.0.0"
     xmlns="http://www.w3.org/ns/widgets"
     xmlns:cdv="http://cordova.apache.org/ns/1.0"
@@ -65,16 +65,16 @@
     <feature name="FinishImport">
         <param
             name="android-package"
-            value="com.noname.shijian.FinishImport" />
+            value="xyz.unitedrhythmizedclub.supersmashtabletop.FinishImport" />
     </feature>
-    <name>无名杀</name>
+    <name>大乱桌斗</name>
     <description>
-        无名杀
+        大乱桌斗
     </description>
     <author
-        email="dev@cordova.apache.org"
-        href="http://cordova.io">
-        诗笺
+        email="1143158498x@gmail.com"
+        href="https://unitedrhythmized.club/html/work/game/super-smash-tabletop.html">
+        Show-K
     </author>
     <content src="index.html" />
     <access origin="*" />

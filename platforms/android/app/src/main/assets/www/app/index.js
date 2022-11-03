@@ -36,7 +36,7 @@
 				if (document.hidden == false) getImportPackage();
 			});
 
-			/** 无名杀资源目录 */
+			/** 大乱桌斗资源目录 */
 			let appPath = '';
 			if (typeof window.require == 'function' && typeof window.__dirname == 'string') {
 				appPath = __dirname;
@@ -85,7 +85,7 @@
 							console.error('www/app/noname.zip不存在: ' + error.code);
 							const zipDataDiv = document.getElementById('changesite');
 							zipDataDiv.innerText = 'www/app/noname.zip不存在';
-							// alert('请用其他方式打开zip文件，选择无名杀导入(诗笺版)，注: 万能导入无效');
+							// alert('请用其他方式打开zip文件，选择大乱桌斗导入，注: 万能导入无效');
 							checkConnection();
 						});
 					}, error => {
@@ -93,7 +93,7 @@
 						console.error('www/app文件夹不存在: ' + error.code);
 						const zipDataDiv = document.getElementById('changesite');
 						zipDataDiv.innerText = 'www/app文件夹不存在';
-						// alert('请用其他方式打开zip文件，选择无名杀导入(诗笺版)，注: 万能导入无效');
+						// alert('请用其他方式打开zip文件，选择大乱桌斗导入，注: 万能导入无效');
 						checkConnection();
 					});
 			});
@@ -304,7 +304,7 @@
 
 				function success() {
 					button.classList.remove('disabled');
-					button.innerHTML = '下载无名杀';
+					button.innerHTML = '下载游戏';
 					version.innerHTML = 'v' + window.noname_update.version;
 				}
 
@@ -431,7 +431,7 @@
 									}, error => {
 										navigator.notification.activityStop();
 										console.error('www/SJSettings文件夹不存在: ' + error.code);
-										// alert('请用其他方式打开zip文件，选择无名杀导入(诗笺版)，注: 万能导入无效');
+										// alert('请用其他方式打开zip文件，选择大乱桌斗导入，注: 万能导入无效');
 									});
 								});
 						}, 1000);
@@ -492,8 +492,8 @@
 						<a href="https://hub.fastgit.org/libccy/noname/archive/refs/heads/master.zip">网址1</a>，
 						或者
 						<a href="https://hub.fastgit.xyz/libccy/noname/archive/refs/heads/master.zip">网址2</a>
-						下载zip文件，或者通过其他方式(比如QQ群)下载最新的“无名杀完整包”。
-						<li>选择zip文件,然后用其他方式-无名杀导入(诗笺版)进行导入
+						下载zip文件。
+						<li>选择zip文件,然后用其他方式-大乱桌斗导入
 						<li>完成上述步骤后，<a href="javascript:localStorage.setItem(\'noname_inited\',window.tempSetNoname);window.location.reload()">点击此处</a>
 					</ol>
 				</div>`;

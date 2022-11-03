@@ -1,4 +1,4 @@
-package com.noname.shijian;
+package xyz.unitedrhythmizedclub.supersmashtabletop;
 
 import android.annotation.SuppressLint;
 import android.widget.ArrayAdapter;
@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import xyz.unitedrhythmizedclub.supersmashtabletop.R;
 
 import java.util.List;
 

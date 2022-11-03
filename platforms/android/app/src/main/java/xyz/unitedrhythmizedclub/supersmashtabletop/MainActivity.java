@@ -17,7 +17,7 @@
        under the License.
  */
 
-package com.noname.shijian;
+package xyz.unitedrhythmizedclub.supersmashtabletop;
 
 import android.content.Intent;
 import android.os.Bundle;

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NonameImportActivity">
+    tools:context="xyz.unitedrhythmizedclub.supersmashtabletop.NonameImportActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
             <TextView
                 android:id="@+id/title"
                 android:textSize="28sp"
-                android:text="无名杀Android(诗笺版)"
+                android:text="大乱桌斗Android"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 

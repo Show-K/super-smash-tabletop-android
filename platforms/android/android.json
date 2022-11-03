@@ -111,37 +111,37 @@
   },
   "installed_plugins": {
     "cordova-plugin-file": {
-      "PACKAGE_NAME": "com.noname.xuanwu"
+      "PACKAGE_NAME": "xyz.unitedrhythmizedclub.supersmashtabletop"
     },
     "cordova-plugin-file-transfer": {
-      "PACKAGE_NAME": "com.noname.xuanwu"
+      "PACKAGE_NAME": "xyz.unitedrhythmizedclub.supersmashtabletop"
     },
     "cordova-plugin-device": {
-      "PACKAGE_NAME": "com.noname.xuanwu"
+      "PACKAGE_NAME": "xyz.unitedrhythmizedclub.supersmashtabletop"
     },
     "cordova-plugin-badge": {
-      "PACKAGE_NAME": "com.noname.xuanwu"
+      "PACKAGE_NAME": "xyz.unitedrhythmizedclub.supersmashtabletop"
     },
     "cordova-plugin-local-notification": {
-      "PACKAGE_NAME": "com.noname.xuanwu"
+      "PACKAGE_NAME": "xyz.unitedrhythmizedclub.supersmashtabletop"
     },
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.noname.xuanwu"
+      "PACKAGE_NAME": "xyz.unitedrhythmizedclub.supersmashtabletop"
     },
     "cordova-plugin-dialogs": {
-      "PACKAGE_NAME": "com.noname.xuanwu"
+      "PACKAGE_NAME": "xyz.unitedrhythmizedclub.supersmashtabletop"
     },
     "cordova-plugin-websocket": {
-      "PACKAGE_NAME": "com.noname.xuanwu"
+      "PACKAGE_NAME": "xyz.unitedrhythmizedclub.supersmashtabletop"
     },
     "cordova-plugin-add-swift-support": {
-      "PACKAGE_NAME": "com.noname.xuanwu"
+      "PACKAGE_NAME": "xyz.unitedrhythmizedclub.supersmashtabletop"
     },
     "cordova-plugin-websocket-server": {
-      "PACKAGE_NAME": "com.noname.xuanwu"
+      "PACKAGE_NAME": "xyz.unitedrhythmizedclub.supersmashtabletop"
     },
     "cordova-plugin-android-permissions": {
-      "PACKAGE_NAME": "com.noname.shijian"
+      "PACKAGE_NAME": "xyz.unitedrhythmizedclub.supersmashtabletop"
     }
   },
   "dependent_plugins": {},

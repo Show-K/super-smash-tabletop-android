@@ -1,11 +1,9 @@
-package com.noname.shijian;
+package xyz.unitedrhythmizedclub.supersmashtabletop;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.net.Uri;
-import android.provider.DocumentsContract;
 import android.util.Log;
 
 import org.apache.cordova.CallbackContext;

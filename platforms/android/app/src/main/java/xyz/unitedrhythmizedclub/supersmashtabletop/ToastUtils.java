@@ -1,4 +1,4 @@
-package com.noname.shijian;
+package xyz.unitedrhythmizedclub.supersmashtabletop;
 
 import android.widget.Toast;
 import android.content.Context;

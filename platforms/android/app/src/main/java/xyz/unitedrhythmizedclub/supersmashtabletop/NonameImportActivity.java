@@ -1,4 +1,4 @@
-package com.noname.shijian;
+package xyz.unitedrhythmizedclub.supersmashtabletop;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -16,6 +16,8 @@ import android.support.annotation.NonNull;
 import android.util.Log;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import xyz.unitedrhythmizedclub.supersmashtabletop.R;
 
 import java.io.BufferedReader;
 import java.io.CharArrayWriter;
@@ -185,7 +187,7 @@ public class NonameImportActivity extends Activity {
 		} else if (getIntent() != null && getIntent().getExtras() != null && "true".equals(getIntent().getExtras().getString("unzip"))) {
 			loadAssetZip();
 		} else {
-			// ToastUtils.show(NonameImportActivity.this, "未通过无名杀打开zip");
+			// ToastUtils.show(NonameImportActivity.this, "未通过大乱桌斗打开zip");
 			Intent intent = new Intent(this, MainActivity.class);
 			startActivity(intent);
 			this.finish();
@@ -682,7 +684,7 @@ public class NonameImportActivity extends Activity {
 			}
 		}
 
-		updateText("正在为你启动无名杀。");
+		updateText("正在为你启动大乱桌斗。");
 		Timer timer = new Timer();
 		timer.schedule(new TimerTask(){
 			public void run(){
@@ -695,7 +697,7 @@ public class NonameImportActivity extends Activity {
 
 	/** 不延时进入游戏 */
 	private void afterFinishImportExtension() {
-		updateText("正在为你启动无名杀");
+		updateText("正在为你启动大乱桌斗");
 		if (dialog != null) {
 			// 关闭对话框
 			dialog.dismiss();
@@ -974,7 +976,7 @@ public class NonameImportActivity extends Activity {
 			updateText("解压完成！");
 			// 清除缓存
 			clearCache(cacheDir);
-			// 进入无名杀
+			// 进入大乱桌斗
 			if (extName != null) {
 				afterFinishImportExtension(extName);
 			} else {

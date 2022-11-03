@@ -19,7 +19,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
 		}
 	}
 	game.saveConfigValue('extensions');
-	
+
 	// 避免提示是否下载图片和字体素材
 	if (!lib.config.asset_version) {
 		game.saveConfig('asset_version', '无');
@@ -117,7 +117,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
 			};
 
 			/**
-			 * 对选择文件或路径选择后返回到无名杀后执行的代码
+			 * 对选择文件或路径选择后返回到大乱桌斗后执行的代码
 			 * @param { object } result
 			 * @param { string } result.path 文件地址
 			 * @param { boolean } result.isDirectory 是否是文件夹
@@ -130,7 +130,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
 				if (type == 'file') {
 					if (!isDirectory && data) {
 						const split = path.split('/');
-						if (split[split.length - 1].startsWith('无名杀 - 数据')) {
+						if (split[split.length - 1].startsWith('大乱桌斗 - 数据')) {
 							noname_shijianInterfaces.importConfigData(data);
 						}
 					}
@@ -274,8 +274,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
 				}
 			};
 		},
-		precontent: function() {
-			const emptyFun = () => {};
+		precontent: function () {
+			const emptyFun = () => { };
 
 			document.addEventListener('deviceready', () => {
 				// @ts-ignore
@@ -341,7 +341,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
 						return;
 					} else _status.isGettingExtensions = true;
 					/** 扩展下载地址 */
-					const my_ext_site = 'https://raw.fastgit.org/nonameShijian/noname-android-extension/main/';
+					const my_ext_site = 'https://unitedrhythmized.club/Show-K/noname-android-extension/main/';
 					function getExtensions() {
 						navigator.notification.activityStart('正在获取扩展', '请稍候...');
 						fetch(my_ext_site + 'update.js')
@@ -432,7 +432,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
 							right: '15px',
 							width: '65px',
 							top: '15px'
-						}, function() {
+						}, function () {
 							delete _status.isGettingExtensions;
 							ui.dialog.show();
 							ui.control.show();
@@ -468,7 +468,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
 							const ext_name = ui.create.div('.caption', extName, ext);
 							const ext_author = ui.create.div('.text.author', '作者: ' + (author ? author : '未知'), ext);
 							const ext_version = ui.create.div('.text', '版本: ' + (version ? version : '未知版本'), ext);
-							// 提示无名杀版本不兼容
+							// 提示大乱桌斗版本不兼容
 							if (typeof nonameVersion == 'string' && lib.version != nonameVersion) {
 								ui.create.node('span', ext_version, {
 									innerHTML: '<span style="color: turquoise;">(版本不兼容)</span>',
@@ -506,10 +506,10 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
 							checkbox.type = 'checkbox';
 							checkbox.addEventListener('change', function () {
 								if (this.checked) {
-									// 判断是否符合无名杀版本
+									// 判断是否符合大乱桌斗版本
 									if (typeof nonameVersion == 'string') {
 										if (lib.version != nonameVersion) {
-											alert(`为避免扩展报错，本扩展的当前版本(${version ? version : '未知版本'})只适用于无名杀版本${nonameVersion}`);
+											alert(`为避免扩展报错，本扩展的当前版本(${version ? version : '未知版本'})只适用于大乱桌斗版本${nonameVersion}`);
 											this.checked = false;
 											return false;
 										}
@@ -538,7 +538,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
 							});
 							const span = ui.create.node('span', download, {
 								innerHTML: '是否下载此扩展'
-							}, function() {
+							}, function () {
 								checkbox.click();
 							});
 						}
@@ -582,7 +582,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
 						const download = () => {
 							if (extList.length) {
 								const currentExt = extList.shift();
-								let i = 0, 
+								let i = 0,
 									files = window['noname_android_extension'][currentExt].files,
 									max = files.length;
 								/** 重新下载 */
@@ -669,7 +669,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
 					ui.dialog.hide();
 					ui.control.hide();
 					if (_status.getExtensionsDialog) {
-						 _status.getExtensionsDialog.show();
+						_status.getExtensionsDialog.show();
 					} else {
 						getExtensions();
 					}
@@ -677,10 +677,10 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
 			},
 			listView: {
 				name: '<button>选择导入配置文件</button>',
-				intro: '跳转到文件管理页面，选择一个配置文件并导入(通常是在files/无名杀 - 数据 - xxxx)',
+				intro: '跳转到文件管理页面，选择一个配置文件并导入(通常是在files/大乱桌斗 - 数据 - xxxx)',
 				clear: true,
 				onclick() {
-					const emptyFun = () => {};
+					const emptyFun = () => { };
 					cordova.exec(emptyFun, emptyFun, 'FinishImport', 'listView', ['file', 'readFile']);
 				}
 			},
@@ -750,11 +750,11 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
 			}
 		},
 		package: {
-			intro: "本扩展的功能是导入\"从其他应用使用无名杀打开的扩展包\"，请勿删除",
-			author: "诗笺",
+			intro: "本扩展的功能是导入\"从其他应用使用大乱桌斗打开的扩展包\"，请勿删除",
+			author: "诗笺(Show-K修改)",
 			diskURL: "",
 			forumURL: "",
-			version: "1.3",
+			version: "1.3SST",
 		}
 	};
 });

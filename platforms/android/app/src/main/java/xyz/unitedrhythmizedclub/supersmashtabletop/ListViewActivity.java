@@ -1,4 +1,4 @@
-package com.noname.shijian;
+package xyz.unitedrhythmizedclub.supersmashtabletop;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -6,11 +6,12 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import xyz.unitedrhythmizedclub.supersmashtabletop.R;
 
 import java.io.File;
 import java.util.ArrayList;
