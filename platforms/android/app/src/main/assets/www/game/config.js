@@ -24,7 +24,7 @@ window.config={
 		stockextension:['boss','cardpile','coin','wuxing'],
 		layout:['default','newlayout'],
 		theme:['woodden','music','simple'],
-		card_font:['fzhtk'],
+		card_font:['sarasa'],
 		double_hp:['hejiansan','pingjun','zuidazhi','zuixiaozhi','zonghe'],
 		image_background_filter:['default','blur','gray','sepia','invert','saturate','contrast','hue','brightness']
 	},
@@ -87,7 +87,7 @@ window.config={
 	asset_image:true,
 	asset_font:true,
 
-	card_font:'fzhtk',
+	card_font:'sarasa',
 	show_statusbar_ios:'off',
 	show_statusbar_android:false,
 	show_name:true,
@@ -134,7 +134,7 @@ window.config={
 	connect_characters:[],
 	connect_cards:[],
 	plays:[],
-	extensions:['SJ Settings','在线更新','十周年UI','导入助手'],
+	extensions:['乱斗设置','在线更新','十周年UI','导入助手'],
 	banned:[],
 	super_smash_tabletop_banned:['sst_claude'],
 	identity_banned:['sst_claude'],

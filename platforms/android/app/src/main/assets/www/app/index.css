@@ -15,7 +15,7 @@ div {
 	margin: 0;
 	padding: 0;
 	left: 10%;
-	font-family: 'fzhtk';
+	font-family: 'sarasa';
 }
 
 a {
@@ -146,8 +146,8 @@ input[type="checkbox"] {
 }
 
 @font-face {
-	font-family: 'fzhtk';
-	src: url('fzhtk.ttf');
+	font-family: 'sarasa';
+	src: url('sarasa-ui-sc-regular.woff2');
 }
 
 #message {

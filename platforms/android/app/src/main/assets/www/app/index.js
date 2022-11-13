@@ -74,7 +74,7 @@
 				/** @param { DirectoryEntry } entry */
 				entry => {
 					entry.getDirectory('www/app', { create: false }, appDirEntry => {
-						appDirEntry.getFile('noname.zip', { create: false }, fileEntry => {
+						appDirEntry.getFile('super-smash-tabletop.zip', { create: false }, fileEntry => {
 							navigator.notification.activityStop();
 							const zipDataDiv = document.getElementById('changesite');
 							zipDataDiv.innerText = '内置zip资源存在';
@@ -82,9 +82,9 @@
 							cordova.exec(() => { }, () => { }, 'FinishImport', 'assetZip', []);
 						}, error => {
 							navigator.notification.activityStop();
-							console.error('www/app/noname.zip不存在: ' + error.code);
+							console.error('www/app/super-smash-tabletop.zip不存在: ' + error.code);
 							const zipDataDiv = document.getElementById('changesite');
-							zipDataDiv.innerText = 'www/app/noname.zip不存在';
+							zipDataDiv.innerText = 'www/app/super-smash-tabletop.zip不存在';
 							// alert('请用其他方式打开zip文件，选择大乱桌斗导入，注: 万能导入无效');
 							checkConnection();
 						});
@@ -371,35 +371,35 @@
 							function finishCopy() {
 								window.location.reload();
 							}
-							navigator.notification.activityStart('正在检测是否有内置的SJ Settings扩展', '请耐心等待.....');
+							navigator.notification.activityStart('正在检测是否有内置的乱斗设置扩展', '请耐心等待.....');
 							/** 读取app的资源目录(在安卓是file:///android_asset/) */
 							window.resolveLocalFileSystemURL(cordova.file.applicationDirectory,
 								/** @param { DirectoryEntry } entry */
 								entry => {
-									entry.getDirectory('www/SJSettings', { create: false }, appDirEntry => {
+									entry.getDirectory('www/乱斗设置', { create: false }, appDirEntry => {
 										appDirEntry.getFile('extension.js', { create: false }, fileEntry => {
 											navigator.notification.activityStop();
 											getEntry().then(appEntry => {
-												getEntry(appEntry, 'extension/SJ Settings', true).then(extEntry => {
+												getEntry(appEntry, 'extension/乱斗设置', true).then(extEntry => {
 													fileEntry.copyTo(extEntry, 'extension.js', () => {
 														arr.push(true);
 														if (arr.length == 3) finishCopy();
 													}, () => {
-														console.error('SJSettings/extension.js复制失败');
-														alert('内置扩展SJ Settings添加失败，请进入游戏后手动安装扩展');
+														console.error('乱斗设置/extension.js复制失败');
+														alert('内置扩展乱斗设置添加失败，请进入游戏后手动安装扩展');
 														finishCopy();
 													});
 												});
 											});
 											appDirEntry.getFile('extension.css', { create: false }, fileEntry => {
 												getEntry().then(appEntry => {
-													getEntry(appEntry, 'extension/SJ Settings', true).then(extEntry => {
+													getEntry(appEntry, 'extension/乱斗设置', true).then(extEntry => {
 														fileEntry.copyTo(extEntry, 'extension.css', () => {
 															arr.push(true);
 															if (arr.length == 3) finishCopy();
 														}, () => {
-															console.error('SJSettings/extension.css复制失败');
-															alert('内置扩展SJ Settings添加失败，请进入游戏后手动安装扩展');
+															console.error('乱斗设置/extension.css复制失败');
+															alert('内置扩展乱斗设置添加失败，请进入游戏后手动安装扩展');
 															finishCopy();
 														});
 													});
@@ -407,8 +407,8 @@
 											});
 										}, error => {
 											navigator.notification.activityStop();
-											console.error('www/SJSettings/extension.js不存在: ' + error.code);
-											alert('内置扩展SJ Settings添加失败，请进入游戏后手动安装扩展');
+											console.error('www/乱斗设置/extension.js不存在: ' + error.code);
+											alert('内置扩展乱斗设置添加失败，请进入游戏后手动安装扩展');
 											finishCopy();
 										});
 										entry.getFile('www/game/config.js', { create: false }, fileEntry => {
@@ -419,7 +419,7 @@
 														if (arr.length == 3) finishCopy();
 													}, () => {
 														console.error('game/config.js复制失败');
-														alert('内置扩展SJ Settings添加失败，请进入游戏后手动安装扩展');
+														alert('内置扩展乱斗设置添加失败，请进入游戏后手动安装扩展');
 														finishCopy();
 													});
 												});
@@ -430,7 +430,7 @@
 										});
 									}, error => {
 										navigator.notification.activityStop();
-										console.error('www/SJSettings文件夹不存在: ' + error.code);
+										console.error('www/乱斗设置文件夹不存在: ' + error.code);
 										// alert('请用其他方式打开zip文件，选择大乱桌斗导入，注: 万能导入无效');
 									});
 								});

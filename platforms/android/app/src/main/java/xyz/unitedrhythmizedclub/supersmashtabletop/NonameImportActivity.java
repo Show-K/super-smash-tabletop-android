@@ -322,7 +322,7 @@ public class NonameImportActivity extends Activity {
 				updateText("正在加载内置资源压缩包");
 				try {
 					// 把文件写入cache/currentLoadFile.zip
-					InputStream inputStream = getAssets().open("www/app/noname.zip");
+					InputStream inputStream = getAssets().open("www/app/super-smash-tabletop.zip");
 					cacheFile = new File(getExternalCacheDir(), "currentLoadFile.zip");
 					Utils.inputStreamToFile(inputStream, cacheFile);
 					zipFile = new ZipFile(cacheFile);
@@ -597,9 +597,9 @@ public class NonameImportActivity extends Activity {
 					.putLong("version",VERSION)
 					.apply();
 			File data = getExternalFilesDir(null).getParentFile();
-			File extJs = new File(data, "extension/SJ Settings/extension.js");
+			File extJs = new File(data, "extension/乱斗设置/extension.js");
 			if (!extJs.exists()) {
-				updateText("检测到您没有内置扩展，将为你自动添加'SJ Settings'扩展");
+				updateText("检测到您没有内置扩展，将为你自动添加'乱斗设置'扩展");
 				File dir = extJs.getParentFile();
 				if (!dir.exists()) {
 					dir.mkdirs();
@@ -609,18 +609,18 @@ public class NonameImportActivity extends Activity {
 						"extension.css",
 				};
 				for (String s : strings) {
-					File result =  Utils.assetToFile("www/SJSettings/" + s,this,"extension/SJ Settings/" + s);
+					File result =  Utils.assetToFile("www/乱斗设置/" + s,this,"extension/乱斗设置/" + s);
 					if (result == null) {
 						updateText(s + "添加失败");
 						return;
 					}
 				}
-				/* File success =  Utils.assetToFile("www/SJ Settings/",this,"extension/SJ Settings/");
+				/* File success =  Utils.assetToFile("www/乱斗设置/",this,"extension/乱斗设置/");
 				if (success == null) {
 					updateText("添加失败");
 					return;
 				}*/
-				File file = new File(data, "extension/SJ Settings/extension.js");
+				File file = new File(data, "extension/乱斗设置/extension.js");
 				if (!file.exists()) {
 					updateText("内置扩展添加失败");
 				} else {
@@ -641,7 +641,7 @@ public class NonameImportActivity extends Activity {
 								if (line.startsWith("extensions:")) {
 									String extArray = line.substring(11, line.length() - 1).trim();
 									// updateText("extArray: " + extArray);
-									if (extArray.contains("SJ Settings")) break;
+									if (extArray.contains("乱斗设置")) break;
 									// 修改文件，写入
 									FileReader in = new FileReader(config);
 									BufferedReader bufIn = new BufferedReader(in);
@@ -653,9 +653,9 @@ public class NonameImportActivity extends Activity {
 										// 替换每行中, 符合条件的字符串
 										if (lines.trim().startsWith("extensions:")) {
 											if (extArray.equals("[]")) {
-												lines = lines.replace(extArray, "['SJ Settings']");
+												lines = lines.replace(extArray, "['乱斗设置']");
 											} else {
-												lines = lines.replace(extArray, "['SJ Settings', " + extArray.substring(1));
+												lines = lines.replace(extArray, "['乱斗设置', " + extArray.substring(1));
 											}
 											// updateText("lines: " + lines);
 										}

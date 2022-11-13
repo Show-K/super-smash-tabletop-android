@@ -28,11 +28,11 @@
 					/** @param { DirectoryEntry } entry */
 					entry => {
 						entry.getDirectory('www/app', { create: false }, appDirEntry => {
-							appDirEntry.getFile('noname.zip', { create: false }, fileEntry => {
+							appDirEntry.getFile('super-smash-tabletop.zip', { create: false }, fileEntry => {
 								// 检测app是否更新了，是就跳转到java解压
 								cordova.exec(() => {}, () => {}, 'FinishImport', 'checkAppUpdate', []);
 							}, error => {
-								console.warn('检查更新:www/app/noname.zip不存在: ' + error.code);
+								console.warn('检查更新:www/app/super-smash-tabletop.zip不存在: ' + error.code);
 							});
 						}, error => {
 							console.warn('检查更新:www/app文件夹不存在: ' + error.code);
