@@ -489,9 +489,7 @@
 				`<div>
 					<ol>
 						<li>访问
-						<a href="https://hub.fastgit.org/Show-K/noname/archive/refs/heads/super-smash-tabletop.zip">网址1</a>，
-						或者
-						<a href="https://hub.fastgit.xyz/Show-K/noname/archive/refs/heads/super-smash-tabletop.zip">网址2</a>
+						<a href="https://ghproxy.com/https://github.com/Show-K/noname/archive/refs/heads/super-smash-tabletop.zip">https://ghproxy.com/https://github.com/Show-K/noname/archive/refs/heads/super-smash-tabletop.zip</a>
 						下载zip文件。
 						<li>选择zip文件,然后用其他方式-大乱桌斗导入
 						<li>完成上述步骤后，<a href="javascript:localStorage.setItem(\'noname_inited\',window.tempSetNoname);window.location.reload()">点击此处</a>
